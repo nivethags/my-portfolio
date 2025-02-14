@@ -255,17 +255,6 @@ header {
     }
 }
 
-/* @keyframes text {
-    0%{
-        transform: scale(1,1);
-    }
-    50%{
-        transform: scale(1.1,1.1);
-    }
-    100%{
-        transform: scale(1,1);
-    }
-}  */
 
 a {
     cursor: pointer;
@@ -607,7 +596,7 @@ a {
     /* align-items: center; */
     justify-content: center;
     position: absolute;
-    left: calc(200px * 8);
+    left: calc(200px * 9);
     animation-name: scrollLeft;
     animation-duration: 30s;
     animation-timing-function: linear;
@@ -619,6 +608,12 @@ a {
         left: -200px;
     }
 }
+
+
+
+
+
+
 
 /* 
 .item1 {
@@ -661,7 +656,7 @@ a {
 
 
 .marquee-item:nth-child(n) {
-    animation-delay: calc(30s / 8 * (8 - var(--n)) * -1);
+    animation-delay: calc(30s / 9 * (9 - var(--n)) * -1);
 }
 
 
@@ -1107,14 +1102,7 @@ a {
         display: none;
     }
 
-    /* .experience-card {
-        background-image: url('expe-img.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        color: #3f6eed;
-    } */
+  
 
     .footers {
         flex-wrap: wrap;
@@ -1141,9 +1129,18 @@ a {
     a {
         font-size: 14px;
     }
+    #footer a{
+        color: white!important;
+    }
 
 }
-
+.contact-info a{
+    color: white!important;
+}
+/* .contact-info div{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,300px));
+} */
 @media (max-width:425px) and (orientation:landscape) {
     .home-content>*{
         padding-bottom: 10px;
@@ -1241,4 +1238,87 @@ a {
 
 
 }
+@media (width:1024px) {
+    .contactpage {
+        width: 90vw!important;
+        align-items: center!important;
+        position: absolute!important;
+        bottom: 45%!important;
+    }
+    #footer{
+        position: relative!important;
+    }
+}
 
+
+/* .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    word-break: break-word;
+}
+.contact-info i {
+    color: #007bff;
+}
+@media (max-width: 480px) {
+    .contact-info {
+        max-width: 90%;
+        padding: 15px;
+    }
+    .contact-info i {
+        font-size: 1.5rem;
+    }
+    .contact-info a {
+        font-size: 0.9rem;
+    }
+} */
+
+.experience.con {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: 20px; /* Adjust spacing between cards */
+    height: 100vh;
+    width: 100vw;
+}
+
+.experience-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+.intern{
+    width: 70%!important;
+   /* border: 1px solid; */
+}
+.experience-card ul {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .experience.con {
+        flex-direction: column;
+    }
+}
