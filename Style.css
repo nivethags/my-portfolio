@@ -14,8 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-.skill,
-.footers,
 .home,
 #skill,
 #experience,.marquee-container {
@@ -542,72 +540,12 @@ a {
     }
 }
 
-/* span {
-    color: blue;
-    font-size: larger;
-} */
-
-.marquee-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    /* margin-block: auto  ; */
-    /* border: 1px solid black; */
-    /* margin-top: 2; */
+/* new header */
 
 
-}
 
-.marquee-container h1 {
-    margin: 2% 0 4% 0;
-}
 
-.items {
-    /* display: flex;
-    flex-direction: column; */
-    /* padding: 0; */
-    text-align: center;
-    /* align-content: center; */
-    width: 90%;
-    max-width: 1536px;
-    position: relative;
-    height: 300px;
-    /* height:55%;     */
-    overflow: hidden;
-    margin-top: 0px;
-    padding-top: 0px;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
-    /* border: 1px solid teal;   */
 
-}
-
-.marquee-item {
-    /* border: 1px solid violet; */
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-    height: 150px;
-    background-color: rgba(87, 198, 245, 0.5);
-    border-radius: 9px;
-    align-content: center;
-    /* align-items: center; */
-    justify-content: center;
-    position: absolute;
-    left: calc(200px * 9);
-    animation-name: scrollLeft;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes scrollLeft {
-    to {
-        left: -200px;
-    }
-}
 
 
 
@@ -696,8 +634,13 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
+.footers{
+    display: flex;
+    flex-wrap: wrap;
+}
 .contact,
 .quick-links {
     display: flex;
@@ -727,6 +670,7 @@ a {
     align-items: center;
     align-content: center;
     font-family: Arial, sans-serif;
+    flex-wrap: wrap;
 }
 
 .experience span {
@@ -918,7 +862,7 @@ a {
 .cont>* {
     display: flex;
     flex-direction: column;
-    margin-top: 23%;
+    margin-top: 8%;
     padding-bottom: 10px;
     padding-inline: 2%;
     color: white;
@@ -1211,9 +1155,6 @@ a {
         word-break: break-word;
     }
 
-    .info {
-        height: 60%;
-    }
 
     .info .cont {
         display: flex;
@@ -1231,11 +1172,6 @@ a {
         padding: 0;
         margin: 0;
     }
-
-    .me {
-        margin-top: 40%;
-    }
-
 
 }
 @media (width:1024px) {
@@ -1289,7 +1225,7 @@ a {
     }
 } */
 
-.experience.con {
+.experience .con {
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-around; */
@@ -1322,3 +1258,197 @@ a {
         flex-direction: column;
     }
 }
+
+
+/* 08-07-2025 */
+
+/* ---------- Variables ---------- */
+:root {
+  --bg-dark: #0d0d0d;
+  --fg-light: #ffffff;
+  --accent: #00bfa6;
+  --radius: 8px;
+  --gap: 2rem;
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- Footer wrapper ---------- */
+.footer {
+  background: var(--bg-dark);
+  color: var(--fg-light);
+  font-family: var(--font-main);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+  padding: 3rem 2rem;
+}
+
+/* ---------- Column headings ---------- */
+.footer-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+}
+
+/* ---------- Generic list reset ---------- */
+.footer-list,
+.footer-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-list{
+    flex-direction: column;
+}
+
+/* ---------- Contact + Project lists ---------- */
+.footer-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+  font-size: 1rem;
+}
+
+.footer-list a {
+  color: var(--fg-light);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.footer-list a:hover {
+  color: var(--accent);
+}
+
+.footer-list i {
+  color: var(--accent);
+  width: 1.2rem;
+  text-align: center;
+}
+
+/* ---------- Tech‑stack badges ---------- */
+.footer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.footer-tags li {
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  transition: background 0.25s, color 0.25s;
+}
+
+.footer-tags li:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+  cursor: default;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+  .footer-heading {
+    font-size: 1.5rem;
+  }
+}
+.footer-heading {
+  font-size: 1.8rem;
+  color: #00bfa6;
+  margin-bottom: 1.2rem;
+}
+
+.footer-heading .sub-note {
+  font-size: 1rem;
+  color: #aaa;
+  font-weight: normal;
+}
+
+/* 09-07-2025 */
+/* ---------- colours & fonts stay as‑is ---------- */
+:root{
+  --accents:#2b91c3;
+  --text:#143b64;
+  --text_accent:#6cd144;
+}
+
+/* ---------- layout unchanged ---------- */
+.skill-section{padding:3rem 1rem; font-family:Poppins,sans-serif; margin:auto; padding-top:10%;}
+.skill-title{text-align:center;font-size:2rem;color:var(--accents);margin-bottom:2rem;}
+.skill-row{display:flex;gap:2rem;justify-content:space-between;flex-wrap:wrap;}
+.skill-group{flex:1;min-width:250px;}
+.group-title{font-size:1.3rem;color:var(--text_accent);margin-bottom:1rem;border-bottom:1px solid #eee;padding-bottom:5px;}
+
+/* ---------- base bar & label ---------- */
+.skill{margin-bottom:1rem;opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.skill span{display:block;font-weight:600;color:var(--text);margin-bottom:5px;font-size:1rem;}
+.bar{background:#eaeaea;height:8px;border-radius:6px;overflow:hidden;position:relative;}
+.fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--accents);border-radius:6px;transition:width 1.6s ease-in-out .25s;}
+
+/* ---------- when IntersectionObserver adds .show ---------- */
+.skill.show{opacity:1;transform:translateY(0);}
+.skill.show .fill{width:var(--target);}
+@media(max-width:768px){.skill-row{flex-direction:column;gap:2rem;}}
+/* keep your existing palette / layout rules */
+
+/* start with bars empty */
+.fill{width:0;transition:width 1.6s ease-in-out .25s;}
+
+/* when .show is present, bar fills to the target */
+.skill.show .fill{width:var(--target);}
+
+/* 12-07-2025 */
+
+@media screen and (max-width: 768px) {
+.footer{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cont{    
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 756px) {
+.footer{
+    align-items: flex-start;
+}
+.experience-card{
+    width: 95% !important;
+}
+
+}
+@media screen and (max-width: 1306px) {
+    
+    .experiences{
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;row-gap: 20%;
+        height:auto !important;
+    }
+    .work{
+        margin-top: 20px;
+    }
+    .home-content{
+        max-width: 90vw;
+    }
+  
+}
+.experiences{
+    display: flex;
+    justify-content: space-around;
+}
+
+.experiences strong{
+    color: rgb(85, 54, 239);
+}
+.experiences span{
+    color: rgb(239, 54, 205);
+}
+
