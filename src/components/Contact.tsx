@@ -7,22 +7,22 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "nivethagslaskhmi@gmail.com",
+      href: "nivethagslaskhmi@gmail.com",
       color: "text-primary",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
-      href: "https://linkedin.com/in/yourprofile",
+      value: "linkedin.com/in/nivethags16",
+      href: "https://linkedin.com/in/nivethags16",
       color: "text-secondary",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/yourusername",
-      href: "https://github.com/yourusername",
+      value: "github.com/nivethags",
+      href: "https://github.com/nivethags",
       color: "text-accent",
     },
   ];
@@ -77,14 +77,28 @@ const Contact = () => {
                   or just want to say hello, I'd love to hear from you. Click below 
                   to send me an email and I'll get back to you as soon as possible.
                 </p>
-                <Button
-                  size="lg"
-                  onClick={() => window.location.href = "mailto:your.email@example.com"}
-                  className="shadow-elegant hover:shadow-glow transition-smooth"
-                >
-                  <Mail className="h-5 w-5 mr-2" />
-                  Send Me an Email
-                </Button>
+     <Button
+  size="lg"
+  onClick={() => {
+    const email = "nivethagslakshmi@gmail.com";
+    const subject = "Contact from Website";
+    const body = "Hello, I'd like to get in touch with you.";
+    
+    // Using template literals correctly
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    console.log("Mailto URL:", mailtoUrl); // Check this in console
+    
+    // Try window.open first
+    window.open(mailtoUrl, "_blank", "noopener,noreferrer");
+  }}
+  className="shadow-elegant hover:shadow-glow transition-smooth cursor-pointer"
+>
+  <Mail className="h-5 w-5 mr-2" />
+  Send Me an Email
+</Button>
+{/* <a href="mailto:nivethagslakshmi@gmail.com" target="_blank">Test Email Link</a> */}
+
               </div>
             </CardContent>
           </Card>

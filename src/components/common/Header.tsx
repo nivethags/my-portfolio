@@ -21,7 +21,7 @@ const Header: React.FC = () => {
               />
               {/* Please replace with your website name */}
               <span className="ml-2 text-xl font-bold text-blue-600">
-                Website Name
+                Nivetha's Portfolio
               </span>
             </Link>
           </div>

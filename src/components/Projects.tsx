@@ -11,20 +11,24 @@ const Projects = () => {
       impact: "Reduced manual refresh needs and improved admin productivity through instant visibility of system changes.",
       image: "https://miaoda-site-img.s3cdn.medo.dev/images/3b2fe1c2-e4a2-42f7-90ab-9856a758cf6f.jpg",
     },
-    {
-      title: "Authentication & User Management System",
-      technologies: ["React.js", "Node.js", "MySQL", "Firebase"],
-      description: "Created a comprehensive authentication system featuring login, OTP verification, and password reset functionality. Designed and implemented role-based access control to manage user permissions across different system levels. Integrated backend APIs with enhanced security validations including input sanitization and token-based authentication.",
-      impact: "Improved security posture while maintaining smooth user experience.",
-      image: "https://miaoda-site-img.s3cdn.medo.dev/images/42e0b4b6-50c9-43bc-a7b9-3fd829580fc1.jpg",
-    },
-    {
-      title: "Student Mobile App",
-      technologies: ["React Native", "Firebase"],
-      description: "Built a mobile application for students to access courses, track progress, and receive announcements. Utilized Firebase Authentication for secure login, Firestore for real-time data synchronization, and Cloud Storage for media files. Created intuitive UI/UX with optimized navigation flows and smooth transitions.",
-      impact: "Enhanced student engagement and provided convenient access to educational resources.",
-      image: "https://miaoda-site-img.s3cdn.medo.dev/images/fde4965b-b37d-47f6-a786-69bd63c12ebe.jpg",
-    },
+    // {
+    //   title: "Authentication & User Management System",
+    //   technologies: ["React.js", "Node.js", "MySQL", "Firebase"],
+    //   description: "Created a comprehensive authentication system featuring login, OTP verification, and password reset functionality. Designed and implemented role-based access control to manage user permissions across different system levels. Integrated backend APIs with enhanced security validations including input sanitization and token-based authentication.",
+    //   impact: "Improved security posture while maintaining smooth user experience.",
+    //   image: "https://miaoda-site-img.s3cdn.medo.dev/images/42e0b4b6-50c9-43bc-a7b9-3fd829580fc1.jpg",
+    // },
+  {
+  title: "Mobile App for a Jewelry Shop",
+  technologies: ["React Native", "Firebase"],
+  description:
+    "Developed a mobile application for a jewelry shop to manage products, handle customer enquiries, and streamline order tracking. Integrated Firebase Authentication for secure login, Firestore for real-time product updates, and Cloud Storage for managing jewelry images. Designed a clean and user-friendly interface with smooth navigation and fast loading performance.",
+  impact:
+    "Improved customer shopping experience and helped the shop manage daily operations more efficiently.",
+  image:
+    "https://miaoda-site-img.s3cdn.medo.dev/images/fde4965b-b37d-47f6-a786-69bd63c12ebe.jpg",
+}
+,
     {
       title: "Customized Corporate Gift Ordering System",
       technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
@@ -32,13 +36,13 @@ const Projects = () => {
       impact: "Streamlined the corporate gifting process and reduced order processing time.",
       image: "https://miaoda-site-img.s3cdn.medo.dev/images/02ce3e4e-ff2d-429f-876e-e14f79ade2b5.jpg",
     },
-    {
-      title: "Full-Stack CRUD Application",
-      technologies: ["React.js", "PHP/Node.js", "MySQL"],
-      description: "Created a complete CRUD application with add, edit, delete, search, and filter capabilities. Designed responsive UI with comprehensive validation logic for data integrity. Developed secure REST APIs with proper error handling and optimized database operations.",
-      impact: "Provided efficient data management with clean architecture and maintainable codebase.",
-      image: "https://miaoda-site-img.s3cdn.medo.dev/images/eef73188-2b18-496a-9018-d836047f7c38.jpg",
-    },
+    // {
+    //   title: "Full-Stack CRUD Application",
+    //   technologies: ["React.js", "PHP/Node.js", "MySQL"],
+    //   description: "Created a complete CRUD application with add, edit, delete, search, and filter capabilities. Designed responsive UI with comprehensive validation logic for data integrity. Developed secure REST APIs with proper error handling and optimized database operations.",
+    //   impact: "Provided efficient data management with clean architecture and maintainable codebase.",
+    //   image: "https://miaoda-site-img.s3cdn.medo.dev/images/eef73188-2b18-496a-9018-d836047f7c38.jpg",
+    // },
   ];
 
   return (
