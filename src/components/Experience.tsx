@@ -1,8 +1,32 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, CheckCircle2 } from "lucide-react";
+import { format, differenceInYears, differenceInMonths } from "date-fns";
+
 
 const Experience = () => {
+
+const joiningDate = new Date("2025-12-06");
+const today = new Date();
+
+// Format date responsively
+const formattedDate = format(joiningDate, "dd MMM yyyy");
+
+// Calculate experience
+const years = differenceInYears(today, joiningDate);
+const months = differenceInMonths(today, joiningDate) % 12;
+
+let experience = "";
+if (years > 0) {
+  experience = `${years} Year${years > 1 ? "s" : ""}`;
+  if (months > 0) {
+    experience += ` ${months} Month${months > 1 ? "s" : ""}`;
+  }
+  experience += " Experience";
+} else {
+  experience = `${months} Month${months > 1 ? "s" : ""} Experience`;
+}
+
   const responsibilities = [
     "Built full-stack features for web and mobile applications, focusing on authentication systems, real-time dashboards, and admin panels",
     "Developed backend APIs with optimized database queries and improved data structures for better performance",
@@ -49,22 +73,29 @@ const Experience = () => {
 
           <div className="space-y-8">
             <Card className="shadow-elegant border-border animate-slide-up">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Briefcase className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <CardTitle className="text-2xl mb-2">Associate Software Engineer</CardTitle>
-                    <div className="flex flex-wrap gap-2 items-center text-muted-foreground">
-                      <Badge variant="outline" className="font-normal">
-                        06 December 2025 to Present - 1+ Year Experience
-                      </Badge>
-                      <span className="text-sm">Full-Stack Development</span>
-                    </div>
-                  </div>
-                </div>
-              </CardHeader>
+
+<CardHeader>
+  <div className="flex items-start gap-4">
+    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+      <Briefcase className="h-6 w-6 text-primary" />
+    </div>
+    <div className="flex-1">
+      <CardTitle className="text-2xl mb-2">Associate Software Engineer</CardTitle>
+      <div className="flex flex-wrap gap-2 items-center text-muted-foreground">
+       <Badge
+  variant="outline"
+  className="font-normal text-left flex flex-col sm:flex-row sm:items-center sm:gap-2"
+>
+  <span>{formattedDate} to Present</span>
+  {/* Show dash only on desktop */}
+  <span className="hidden sm:inline">-</span>
+  <span>{experience}</span>
+</Badge>
+        <span className="text-sm">Full-Stack Development</span>
+      </div>
+    </div>
+  </div>
+</CardHeader>
               
               <CardContent className="space-y-8">
                 <div>
