@@ -6,12 +6,11 @@ import { format, differenceInYears, differenceInMonths } from "date-fns";
 
 const Experience = () => {
 
-const joiningDate = new Date("2024-12-06");
+const joiningDate = new Date("2024-12");
 const today = new Date();
 
 // Format date responsively
-const formattedDate = format(joiningDate, "dd MMM yyyy");
-
+const formattedDate = format(joiningDate, "MMM yyyy");
 // Calculate experience
 const years = differenceInYears(today, joiningDate);
 const months = differenceInMonths(today, joiningDate) % 12;
