@@ -6,7 +6,7 @@ import { format, differenceInYears, differenceInMonths } from "date-fns";
 
 const Experience = () => {
 
-const joiningDate = new Date("2025-12-06");
+const joiningDate = new Date("2024-12-06");
 const today = new Date();
 
 // Format date responsively
