@@ -82,10 +82,10 @@ const Contact = () => {
   onClick={() => {
     const email = "nivethagslakshmi@gmail.com";
     const subject = "Contact from Website";
-    const body = "Hello, I'd like to get in touch with you.";
+    // const body = "Hello, I'd like to get in touch with you.";
     
     // Using template literals correctly
-    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}}`;
     
     console.log("Mailto URL:", mailtoUrl); // Check this in console
     
