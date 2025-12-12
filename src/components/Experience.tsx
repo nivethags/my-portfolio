@@ -58,7 +58,7 @@ const Experience = () => {
                     <CardTitle className="text-2xl mb-2">Associate Software Engineer</CardTitle>
                     <div className="flex flex-wrap gap-2 items-center text-muted-foreground">
                       <Badge variant="outline" className="font-normal">
-                        1 Year Experience
+                        06 December 2025 to Present - 1+ Year Experience
                       </Badge>
                       <span className="text-sm">Full-Stack Development</span>
                     </div>

@@ -85,7 +85,7 @@ const Contact = () => {
     // const body = "Hello, I'd like to get in touch with you.";
     
     // Using template literals correctly
-    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}}`;
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
     
     console.log("Mailto URL:", mailtoUrl); // Check this in console
     
