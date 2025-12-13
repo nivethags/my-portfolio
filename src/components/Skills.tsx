@@ -50,13 +50,10 @@ const Skills = () => {
           description: "Relational database design, query optimization, and data modeling",
         },
         {
-          name: "Firebase",
+          name: "Firebase & Supabase",
           description: "Authentication, Firestore real-time database, and cloud storage integration",
         },
-        {
-          name: "Supabase",
-          description: "Real-time features, subscriptions, and modern database operations",
-        },
+       
       ],
     },
     {

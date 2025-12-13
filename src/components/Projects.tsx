@@ -6,7 +6,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Real-Time Admin Dashboard",
-      technologies: ["React.js", "Node.js", "Supabase"],
+      technologies: ["React.js", "Node.js", "Supabase", "& PHP"],
       description: "Developed a real-time admin dashboard enabling instant data updates and improved workflow efficiency. Built reusable UI components including filters, charts, and data tables. Integrated Supabase subscriptions for live data synchronization and implemented secure API connections.",
       impact: "Reduced manual refresh needs and improved admin productivity through instant visibility of system changes.",
       image: "https://miaoda-site-img.s3cdn.medo.dev/images/3b2fe1c2-e4a2-42f7-90ab-9856a758cf6f.jpg",

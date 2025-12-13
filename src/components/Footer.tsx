@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid xl:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-xl gradient-text mb-4">Developer Portfolio</h3>
+              <h3 className="font-bold text-xl gradient-text mb-4">Who I Am</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Associate Software Engineer passionate about building modern web and 
                 mobile applications with clean code and scalable architecture.
@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-border">
+          {/* <div className="pt-8 border-t border-border">
             <div className="flex flex-col xl:flex-row items-center justify-between gap-4">
               <p className="text-muted-foreground text-sm text-center xl:text-left">
                 {currentYear} Developer Portfolio
@@ -92,7 +92,7 @@ const Footer = () => {
                 Built with <Heart className="h-4 w-4 text-primary fill-primary" /> using React & TypeScript
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
